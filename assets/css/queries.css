@@ -1,0 +1,485 @@
+/*-----------------------------------*\
+  #MEDIA QUERIES
+\*-----------------------------------*/
+
+/**
+ * responsive for larger than 575px screen
+ */
+
+@media (min-width: 575px) {
+  /**
+   * CUSTOM PROPERTY
+   */
+
+  :root {
+    /**
+     * typography
+     */
+
+    --fs-1: 5.8rem;
+    --fs-2: 4rem;
+  }
+
+  /**
+   * REUSED STYLE
+   */
+
+  .container {
+    max-width: 540px;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .hero-subtitle,
+  .section-subtitle {
+    font-size: var(--fs-5);
+  }
+
+  /**
+   * HEADER
+   */
+
+  .header .container {
+    max-width: unset;
+    padding-inline: 30px;
+  }
+
+  /**
+   * HERO
+   */
+
+  .hero-content {
+    padding-inline: 40px;
+  }
+
+  .hero-subtitle .strong {
+    padding-block: 6px;
+  }
+
+  .hero::after {
+    height: 340px;
+  }
+
+  .abs-img-1 {
+    top: 130px;
+    right: -10px;
+    width: 230px;
+  }
+
+  .abs-img-2 {
+    bottom: 20px;
+    left: -40px;
+    width: 310px;
+  }
+
+  /**
+   * ABOUT
+   */
+
+  .about .wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .about-coach {
+    margin-block-end: 0;
+  }
+
+  /**
+   * VIDEO
+   */
+
+  .video-card .card-title {
+    --fs-3: 3.5rem;
+  }
+
+  /**
+   * FOOTER
+   */
+
+  .footer-top .container {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 25px;
+  }
+}
+
+/**
+ * responsive for larger than 768px screen
+ */
+
+@media (min-width: 768px) {
+  /**
+   * CUSTOM PROPERTY
+   */
+
+  :root {
+    /**
+     * typography
+     */
+
+    --fs-2: 4.5rem;
+  }
+
+  /**
+   * REUSED STYLE
+   */
+
+  .container {
+    max-width: 720px;
+  }
+
+  .scrollbar-item {
+    min-width: calc(50% - 12.5px);
+  }
+
+  /**
+   * HERO
+   */
+
+  .hero-banner {
+    max-width: max-content;
+    margin-inline: auto;
+  }
+
+  .abs-img-1 {
+    top: 140px;
+    right: 50px;
+  }
+
+  /**
+   * FOOTER
+   */
+
+  .footer-bottom .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-bottom-list {
+    margin-block-start: 0;
+  }
+}
+
+/**
+ * responsive for larger than 992px screen
+ */
+
+@media (min-width: 992px) {
+  /**
+   * REUSED STYLE
+   */
+
+  .container,
+  .header .container {
+    max-width: 960px;
+  }
+
+  /**
+   * HEADER
+   */
+
+  .nav-open-btn,
+  .nav-close-btn {
+    display: none;
+  }
+
+  .header .btn {
+    display: block;
+  }
+
+  .header {
+    background-color: transparent;
+    box-shadow: none;
+    padding-block: 30px;
+    transition: var(--transition-1);
+  }
+
+  .header.active {
+    transform: translateY(-100%);
+    background-color: var(--white);
+    padding-block: 20px;
+    box-shadow: var(--shadow-1);
+    animation: slideIn 0.5s ease forwards;
+  }
+
+  @keyframes slideIn {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .header .container {
+    gap: 30px;
+  }
+
+  .header .logo {
+    color: var(--white);
+  }
+
+  .header.active .logo {
+    color: var(--rich-black-fogra-29-1);
+  }
+
+  .navbar,
+  .navbar.active {
+    all: unset;
+    margin-inline-start: auto;
+  }
+
+  .navbar-list {
+    display: flex;
+    gap: 10px;
+  }
+
+  .navbar-link {
+    color: var(--white);
+    font-size: unset;
+    padding: 0 10px;
+    margin-block-end: 0;
+  }
+
+  .header.active .navbar-link {
+    color: var(--rich-black-fogra-29-1);
+  }
+
+  .header .navbar-link:is(:hover, :focus, .active) {
+    color: var(--coquelicot);
+  }
+
+  .header.active .btn {
+    background-color: var(--coquelicot);
+    color: var(--white);
+  }
+
+  .header.active .btn:is(:hover, :focus) {
+    background-color: var(--rich-black-fogra-29-1);
+  }
+
+  /**
+   * HERO
+   */
+
+  .hero {
+    background-size: contain;
+    text-align: left;
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: -1000px;
+    left: -500px;
+    width: 1500px;
+    height: 1500px;
+    background-image: radial-gradient(
+      circle,
+      var(--coquelicot_20) 20%,
+      transparent 70% 100%
+    );
+    z-index: -1;
+  }
+
+  .hero .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .hero-content {
+    padding-inline: 0;
+    margin-block-end: 0;
+  }
+
+  .hero-subtitle,
+  .hero .btn {
+    margin-inline: 0;
+  }
+
+  .hero::after {
+    width: 330px;
+    height: 100%;
+    left: auto;
+    right: 0;
+  }
+
+  /**
+   * ABOUT
+   */
+
+  .about .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .about-banner {
+    margin-block-end: 0;
+  }
+
+  .about .wrapper {
+    gap: 30px;
+  }
+
+  /**
+   * FOOTER
+   */
+
+  .footer-top .container {
+    grid-template-columns: 0.85fr 0.5fr 1fr 0.85fr;
+    column-gap: 50px;
+  }
+}
+
+/**
+ * responsive for larger than 1200px screen
+ */
+
+@media (min-width: 1200px) {
+  /**
+   * CUSTOM PROPERTY
+   */
+
+  :root {
+    /**
+     * typography
+     */
+
+    --fs-1: 7rem;
+    --fs-2: 5.5rem;
+    --fs-4: 2.2rem;
+    --fs-5: 2rem;
+
+    /**
+     * spacing
+     */
+
+    --section-padding: 120px;
+  }
+
+  /**
+   * REUSED STYLE
+   */
+
+  .container,
+  .header .container {
+    max-width: 1140px;
+  }
+
+  .btn {
+    padding: 18px 45px;
+    border-radius: var(--radius-10);
+  }
+
+  .section-subtitle {
+    --fs-5: 2.2rem;
+  }
+
+  .has-scrollbar {
+    gap: 30px;
+  }
+
+  .scrollbar-item {
+    min-width: calc(33.33% - 20px);
+  }
+
+  /**
+   * HEADER
+   */
+
+  .header .container {
+    padding-inline: 0;
+  }
+
+  /**
+   * HERO
+   */
+
+  .hero::after {
+    width: 420px;
+  }
+
+  .hero .section-text {
+    --fs-6: 1.8rem;
+  }
+
+  .abs-img-1 {
+    top: 170px;
+    right: -30px;
+    width: 260px;
+  }
+
+  .abs-img-2 {
+    bottom: 60px;
+    left: -80px;
+    width: 360px;
+  }
+
+  /**
+   * ABOUT
+   */
+
+  .about .wrapper {
+    gap: 40px;
+  }
+
+  /**
+   * CLASS, BLOG
+   */
+
+  :is(.class-card, .blog-card) .card-content {
+    padding: 30px;
+  }
+
+  .blog-card .card-meta {
+    padding: 15px 30px;
+  }
+
+  /**
+   * FOOTER
+   */
+
+  .footer-top .container {
+    grid-template-columns: 1fr 0.6fr 0.9fr 1fr;
+  }
+}
+
+/* * responsive for lower than 337px screen */
+
+@media (max-width: 382px) {
+  .logo {
+    color: var(--rich-black-fogra-29-1);
+    font-family: var(--ff-catamaran);
+    font-size: 2.5rem;
+    font-weight: var(--fw-900);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-inline-start: -8px;
+  }
+
+  .logo img {
+    max-width: 100%;
+    height: 80px;
+  }
+
+  .nav-open-btn {
+    padding: 10px 7px;
+  }
+
+  .nav-open-btn .line {
+    width: 20px;
+    height: 2px;
+  }
+
+  .nav-close-btn {
+    font-size: 20px;
+  }
+}
