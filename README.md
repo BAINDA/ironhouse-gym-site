@@ -14,7 +14,7 @@
 
 ## 🖼️ Preview
 
-![IronHouse Gym Preview](https://github.com/user-attachments/assets/23b1116c-e3db-42cd-997c-81549b7c89b1)
+![IronHouse Gym Preview](https://github.com/user-attachments/assets/374a4b19-6d14-4f59-9d86-f54acf677899)
 
 ---
 
